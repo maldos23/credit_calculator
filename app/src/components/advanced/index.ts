@@ -1,0 +1,11 @@
+// Re-exportar todos los componentes avanzados
+export { DateConfiguration } from './DateConfiguration';
+export { FileReader } from './FileReader';
+export { FileWriter } from './FileWriter';
+export { FileCreator } from './FileCreator';
+export { ReportGenerator } from './ReportGenerator';
+export { SystemStatus } from './SystemStatus';
+export { WelcomeScreen } from './WelcomeScreen';
+export { LoadingScreen } from './LoadingScreen';
+export { MainMenu } from './MainMenu';
+export { InactivityControl } from './InactivityControl';
