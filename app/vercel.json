@@ -5,11 +5,11 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "env": {
-    "VITE_API_URL": "https://bbva-credit-api.vercel.app"
+    "VITE_API_URL": "https://bbva-credit-api-production.up.railway.app"
   },
   "build": {
     "env": {
-      "VITE_API_URL": "https://bbva-credit-api.vercel.app"
+      "VITE_API_URL": "https://bbva-credit-api-production.up.railway.app"
     }
   },
   "routes": [

@@ -27,7 +27,8 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onUserLogin }) => 
     setError('');
 
     try {
-      const response = await fetch('http://localhost:8000/advanced/users/login', {
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/advanced';
+      const response = await fetch(`${API_BASE_URL}/users/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
