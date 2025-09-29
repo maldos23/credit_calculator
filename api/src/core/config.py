@@ -2,6 +2,7 @@
 Configuration settings for the credit evaluation API.
 """
 
+import os
 from typing import Dict, Any
 
 
@@ -49,14 +50,14 @@ class Messages:
 
 
 class Settings:
-    """Application settings."""
+    """Application settings with environment variable support."""
     def __init__(self):
-        self.app_name: str = "BBVA Credit Pre-evaluator API"
-        self.version: str = "1.0.0"
-        self.description: str = "API for credit application pre-evaluation"
-        self.debug: bool = False
-        self.host: str = "0.0.0.0"
-        self.port: int = 8000
+        self.app_name: str = os.getenv("APP_NAME", "BBVA Credit Pre-evaluator API")
+        self.version: str = os.getenv("VERSION", "1.0.0")
+        self.description: str = os.getenv("DESCRIPTION", "API for credit application pre-evaluation")
+        self.debug: bool = os.getenv("DEBUG", "false").lower() == "true"
+        self.host: str = os.getenv("HOST", "0.0.0.0")
+        self.port: int = int(os.getenv("PORT", "8000"))  # Vercel assigns PORT dynamically
 
 
 # Global settings instances

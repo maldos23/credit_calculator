@@ -3,7 +3,7 @@
  * Conecta el frontend con los endpoints del backend implementados
  */
 
-const API_BASE_URL = 'http://localhost:8000/advanced';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/advanced';
 
 // Tipos para las respuestas de la API
 export interface ApiResponse<T = any> {

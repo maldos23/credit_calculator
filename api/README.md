@@ -38,31 +38,44 @@ api/
 └── README.md                  # This file
 ```
 
-## Requirements
+# BBVA Credit Pre-evaluator API
 
-- Python 3.13+
-- FastAPI
-- Uvicorn
-- Pydantic
+A FastAPI-based credit application pre-evaluation system that provides automated credit decisions based on configurable business rules.
 
-## Installation
+## 🚀 Quick Start Options
 
-1. Clone the repository:
+### Option 1: Docker (Recommended)
 ```bash
-git clone <repository-url>
-cd bbva-prevealuator-credit/api
+# Development
+docker-compose up --build
+
+# Production
+docker build -f Dockerfile.prod -t bbva-credit-api:prod .
+docker run -p 8000:8000 bbva-credit-api:prod
 ```
 
-2. Create a virtual environment:
+### Option 2: Python Virtual Environment
 ```bash
+# Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+python main.py
 ```
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## 📁 Docker Configuration
+
+See [DOCKER.md](./DOCKER.md) for complete Docker setup and deployment guide.
+
+### Docker Files:
+- `Dockerfile` - Development configuration
+- `Dockerfile.prod` - Production-optimized build
+- `docker-compose.yml` - Local development orchestration
+- `start.sh` - Production startup script
 
 ## Running the Application
 
