@@ -82,3 +82,23 @@ export interface FormState {
   isLoading: boolean;
   error?: string;
 }
+
+// Advanced System Types
+export interface UserSession {
+  id: string;
+  nombre: string;
+  fecha_inicio: [number, number, number];
+  activo: boolean;
+}
+
+export interface DateConfig {
+  day: number;
+  month: number;
+  year: number;
+  fecha?: string;
+}
+
+export interface UserInfo {
+  name: string;
+  id: string;
+}

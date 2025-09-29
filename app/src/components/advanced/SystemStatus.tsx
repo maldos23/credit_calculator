@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { advancedAPI, type UserSession, type FileInfo, type DateConfig } from '@/services/advancedAPI';
+import { advancedAPI, type FileInfo } from '@/services/advancedAPI';
+import type { UserSession, DateConfig } from '@/types';
 
 interface SystemStats {
   usuarios_total: number;
@@ -46,19 +47,19 @@ export const SystemStatus: React.FC = () => {
 
       // Procesar usuarios
       if (usersResponse.success && usersResponse.data) {
-        setUsers(usersResponse.data.usuarios);
+        setUsers(usersResponse.data.usuarios || []);
         setSystemStats(prev => ({
           ...prev,
-          usuarios_total: usersResponse.data.usuarios.length
+          usuarios_total: usersResponse.data?.usuarios?.length || 0
         }));
       }
 
       // Procesar archivos
       if (filesResponse.success && filesResponse.data) {
-        setFiles(filesResponse.data.archivos);
+        setFiles(filesResponse.data.archivos || []);
         setSystemStats(prev => ({
           ...prev,
-          archivos_total: filesResponse.data.archivos.length
+          archivos_total: filesResponse.data?.archivos?.length || 0
         }));
       }
 
@@ -67,7 +68,7 @@ export const SystemStatus: React.FC = () => {
         setCurrentDate(dateResponse.data);
         setSystemStats(prev => ({
           ...prev,
-          fecha_configurada: dateResponse.data.fecha
+          fecha_configurada: [dateResponse.data.day, dateResponse.data.month, dateResponse.data.year]
         }));
       }
 
@@ -238,7 +239,7 @@ export const SystemStatus: React.FC = () => {
                         {users.length > 0 ? (
                           <div className="columns is-multiline">
                             {users.map((user, index) => (
-                              <div key={user.nombre} className="column is-4">
+                              <div key={user.id || index} className="column is-4">
                                 <div className="card">
                                   <div className="card-content">
                                     <div className="media">
@@ -248,13 +249,13 @@ export const SystemStatus: React.FC = () => {
                                         </span>
                                       </div>
                                       <div className="media-content">
-                                        <p className="title is-6">{user.nombre}</p>
+                                        <p className="title is-6">{user.nombre || `Usuario ${index + 1}`}</p>
                                         <p className="subtitle is-7">
                                           Sesión #{index + 1}
                                         </p>
                                         <div className="content is-small">
                                           <p>
-                                            <strong>Inicio:</strong> {formatDate(user.fecha_inicio)}<br/>
+                                            <strong>Inicio:</strong> {user.fecha_inicio ? formatDate(user.fecha_inicio) : 'N/A'}<br/>
                                             <strong>Activo:</strong> {user.activo ? '✅ Sí' : '❌ No'}
                                           </p>
                                         </div>

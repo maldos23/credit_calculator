@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Link, useNavigate } from 'react-router-dom';
 
 // Componentes existentes del sistema de crédito
@@ -39,7 +38,7 @@ function LoadingScreenWithNavigation() {
 function WelcomeScreenWithNavigation() {
   const navigate = useNavigate();
   
-  const handleUserLogin = (userName: string) => {
+  const handleUserLogin = (_userName: string) => {
     navigate('/advanced/loading');
   };
   

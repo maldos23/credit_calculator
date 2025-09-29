@@ -89,7 +89,8 @@ export const ReportGenerator: React.FC = () => {
     }
   };
 
-  const formatDate = (dateTuple: [number, number, number]): string => {
+  // Función auxiliar para formatear fechas (se podría usar en reportes futuros)
+  const _formatDate = (dateTuple: [number, number, number]): string => {
     return `${dateTuple[0].toString().padStart(2, '0')}/${dateTuple[1].toString().padStart(2, '0')}/${dateTuple[2]}`;
   };
 
