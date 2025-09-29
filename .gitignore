@@ -1,0 +1,225 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+#
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db
+
+# General Python ignores
+*.pyc
+*.pyo
+*.egg
+.ropeproject
+.idea
+*.swp
+dist/
+build/
+/sdist
+*.log
+*.tmp
+tmp/
+temp/
+
+# node_modules
+node_modules/
+/build
+
+# Packages #
+############
+# It's better to unpack these files and commit the contents of them
+# Pylint has issues with zipped eggs
+*.egg
+*.egg-info
+dist
+sdist
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+__pycache__/
+
+# Sphinx stuff:
+docs/_build/
+
+# MkDocs stuff:
+site/
+
+# PyBuilder stuff:
+target/
+
+# celery beat schedule file
+celerybeat-schedule
+
+# dotenv
+.env
+
+# Environments
+.env*
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# VS Code
+.vscode/
+
+# DS_Store is a file that stores custom folder attributes
+.DS_Store
+
+# Ignore all log files
+*.log
+
+# Ignore the build folder
+build/
+
+# Ignore the dist folder
+dist/
+
+# Ignore the .pytest_cache folder
+.pytest_cache/
+
+# Ignore the htmlcov folder
+htmlcov/
+
+# Ignore the .coverage file
+.coverage
+
+# Ignore the .env file
+.env
+
+# Ignore the __pycache__ folder
+**/__pycache__
+
+# Ignore the .pyc files
+*.pyc
+
+# Ignore the .pyo files
+*.pyo
+
+# Ignore the .pyd files
+*.pyd
+
+# Ignore the .d files
+*.d
+
+# Ignore the *.so files
+*.so
+
+# Ignore the *.swp files
+*.swp
+
+# Ignore the *.swo files
+*.swo
+
+# Ignore the *.bak files
+*.bak
+
+# Ignore the *.tmp files
+*.tmp
+
+# Ignore the *.DS_Store files
+*.DS_Store
+
+# Ignore the Thumbs.db files
+Thumbs.db
+
+# Ignore the Icon\r files
+Icon\r
+
+# Ignore the .Trash-* folders
+.Trash-*
+
+# Ignore the ._* files
+._*
+
+# Ignore the .Spotlight-V100 folders
+.Spotlight-V100
+
+# Ignore the .TemporaryItems folders
+.TemporaryItems
+
+# Ignore the .fseventsd folders
+.fseventsd
+
+# Ignore the .VolumeIcon.icns files
+.VolumeIcon.icns
+
+# Ignore the .localized files
+.localized
+
+# Ignore the .AppleDouble folders
+.AppleDouble
+
+# Ignore the .LSOverride files
+.LSOverride
+
+# Ignore the .DocumentRevisions-V100 folders
+.DocumentRevisions-V100
+
+# Ignore the .apdisk files
+.apdisk
+
+# Ignore the .com.apple.timemachine.donotpresent files
+.com.apple.timemachine.donotpresent
+
+# Ignore the .AppleDB files
+.AppleDB
+
+# Ignore the .AppleDesktop files
+.AppleDesktop
+
+# Ignore the Network Trash Folder folders
+Network Trash Folder
+
+# Ignore the Temporary Items folders
+Temporary Items
+
+# Ignore the .apdisk files
+.apdisk
+
+# Ignore the .com.apple.timemachine.donotpresent files
+.com.apple.timemachine.donotpresent
+
+# Ignore the .AppleDB files
+.AppleDB
+
+# Ignore the .AppleDesktop files
+.AppleDesktop
+
+# Ignore the Network Trash Folder folders
+Network Trash Folder
+
+# Ignore the Temporary Items folders
+Temporary Items
