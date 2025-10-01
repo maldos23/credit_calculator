@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/advanced';
 interface WelcomeScreenProps {
   onUserLogin: (userData: any) => void;
 }
@@ -27,7 +28,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onUserLogin }) => 
     setError('');
 
     try {
-      const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/advanced';
+      
       const response = await fetch(`${API_BASE_URL}/users/login`, {
         method: 'POST',
         headers: {
